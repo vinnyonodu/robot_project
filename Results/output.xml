@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on darwin)" generated="20220512 00:39:42.961" rpa="false" schemaversion="2">
+<suite id="s1" name="Amazon" source="/Users/vincentonodu/PycharmProjects/pythonProject1/tests/Amazon.robot">
+<kw name="Insert Testing Data" library="Common" type="SETUP">
+<kw name="insert key" library="Common">
+<kw name="Log" library="BuiltIn">
+<arg>inserting...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220512 00:39:43.054" level="INFO">inserting...</msg>
+<status status="PASS" starttime="20220512 00:39:43.054" endtime="20220512 00:39:43.054"/>
+</kw>
+<status status="PASS" starttime="20220512 00:39:43.054" endtime="20220512 00:39:43.054"/>
+</kw>
+<status status="PASS" starttime="20220512 00:39:43.054" endtime="20220512 00:39:43.054"/>
+</kw>
+<test id="s1-t1" name="User must sign in to check out">
+<kw name="Open vinnyz browser" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220512 00:39:43.054" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220512 00:39:43.054" endtime="20220512 00:39:45.968"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://www.amazon.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220512 00:39:45.969" level="INFO">Opening url 'http://www.amazon.com'</msg>
+<status status="PASS" starttime="20220512 00:39:45.968" endtime="20220512 00:39:59.261"/>
+</kw>
+<status status="PASS" starttime="20220512 00:39:43.054" endtime="20220512 00:39:59.261"/>
+</kw>
+<kw name="Product Search Actions" library="Amazon">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Customer Service</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220512 00:39:59.261" endtime="20220512 00:39:59.290"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=twotabsearchtextbox</arg>
+<arg>Reebok</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220512 00:39:59.290" level="INFO">Typing text 'Reebok' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20220512 00:39:59.290" endtime="20220512 00:39:59.393"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=nav-search-submit-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220512 00:39:59.393" level="INFO">Clicking button 'id=nav-search-submit-button'.</msg>
+<status status="PASS" starttime="20220512 00:39:59.393" endtime="20220512 00:40:04.345"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>results for "Reebok"</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220512 00:40:04.345" endtime="20220512 00:40:04.358"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220512 00:40:07.359" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220512 00:40:04.358" endtime="20220512 00:40:07.360"/>
+</kw>
+<status status="PASS" starttime="20220512 00:39:59.261" endtime="20220512 00:40:07.360"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${myFirstVariable}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220512 00:40:07.362" level="INFO">testing vinny</msg>
+<status status="PASS" starttime="20220512 00:40:07.361" endtime="20220512 00:40:07.362"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${myFirstListVariable}[1]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220512 00:40:07.363" level="INFO">testing vinny2</msg>
+<status status="PASS" starttime="20220512 00:40:07.362" endtime="20220512 00:40:07.363"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220512 00:40:07.364" endtime="20220512 00:40:07.466"/>
+</kw>
+<status status="PASS" starttime="20220512 00:40:07.363" endtime="20220512 00:40:07.466"/>
+</kw>
+<doc>This is some basic info about the test</doc>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20220512 00:39:43.054" endtime="20220512 00:40:07.466"/>
+</test>
+<test id="s1-t2" name="User must sign in to check out 2">
+<kw name="Open vinnyz browser" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220512 00:40:07.467" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220512 00:40:07.467" endtime="20220512 00:40:10.245"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://www.amazon.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220512 00:40:10.245" level="INFO">Opening url 'http://www.amazon.com'</msg>
+<status status="PASS" starttime="20220512 00:40:10.245" endtime="20220512 00:40:13.311"/>
+</kw>
+<status status="PASS" starttime="20220512 00:40:07.467" endtime="20220512 00:40:13.311"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${mySecondVariable}</var>
+<arg>testing vinny second variable</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220512 00:40:13.312" level="INFO">${mySecondVariable} = testing vinny second variable</msg>
+<status status="PASS" starttime="20220512 00:40:13.311" endtime="20220512 00:40:13.312"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>@{mySecondListVariable}</var>
+<arg>testing vinny second variable1</arg>
+<arg>testing vinny second variable2</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220512 00:40:13.312" level="INFO">@{mySecondListVariable} = [ testing vinny second variable1 | testing vinny second variable2 ]</msg>
+<status status="PASS" starttime="20220512 00:40:13.312" endtime="20220512 00:40:13.312"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${mySecondVariable}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220512 00:40:13.312" level="INFO">testing vinny second variable</msg>
+<status status="PASS" starttime="20220512 00:40:13.312" endtime="20220512 00:40:13.312"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${mySecondListVariable}[1]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220512 00:40:13.312" level="INFO">testing vinny second variable2</msg>
+<status status="PASS" starttime="20220512 00:40:13.312" endtime="20220512 00:40:13.313"/>
+</kw>
+<kw name="Product Search Actions" library="Amazon">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Customer Service</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220512 00:40:13.313" endtime="20220512 00:40:13.332"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=twotabsearchtextbox</arg>
+<arg>Reebok</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220512 00:40:13.332" level="INFO">Typing text 'Reebok' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20220512 00:40:13.332" endtime="20220512 00:40:13.438"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=nav-search-submit-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220512 00:40:13.438" level="INFO">Clicking button 'id=nav-search-submit-button'.</msg>
+<status status="PASS" starttime="20220512 00:40:13.438" endtime="20220512 00:40:18.218"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>results for "Reebok"</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220512 00:40:18.218" endtime="20220512 00:40:18.231"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220512 00:40:21.233" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220512 00:40:18.231" endtime="20220512 00:40:21.233"/>
+</kw>
+<status status="PASS" starttime="20220512 00:40:13.313" endtime="20220512 00:40:21.233"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220512 00:40:21.234" endtime="20220512 00:40:21.329"/>
+</kw>
+<status status="PASS" starttime="20220512 00:40:21.234" endtime="20220512 00:40:21.329"/>
+</kw>
+<doc>This is some basic info about the test</doc>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20220512 00:40:07.466" endtime="20220512 00:40:21.329"/>
+</test>
+<kw name="Cleanup Testing Data" library="Common" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>cleaning...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220512 00:40:21.330" level="INFO">cleaning...</msg>
+<status status="PASS" starttime="20220512 00:40:21.330" endtime="20220512 00:40:21.330"/>
+</kw>
+<status status="PASS" starttime="20220512 00:40:21.330" endtime="20220512 00:40:21.330"/>
+</kw>
+<doc>This is some basic info about the suite</doc>
+<status status="PASS" starttime="20220512 00:39:42.962" endtime="20220512 00:40:21.330"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Amazon">Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
